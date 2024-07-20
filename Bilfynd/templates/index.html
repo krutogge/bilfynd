@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilfynd.se - Hitta prisvärda bilar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo-img">
+                <span class="site-name">Bildfynd.se</span>
+            </div>
+            <div class="nav-buttons">
+                <a href="page1.html" class="nav-button">Model AI</a>
+                <a href="page2.html" class="nav-button">Bästa Märket</a>
+                <a href="page3.html" class="nav-button">Bästa Dealen</a>
+                <a href="page4.html" class="nav-button">Om Oss</a>
+            </div>
+        </div>
+    </header>
+    <div>
+        <div class="sub-header">
+            <div class="sub-header-content">
+                <p>Trust the process! 5/5</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-wrapper">
+                <div class="left-side">
+                    <div class="top-text-1">
+                        <p>Hitta en prisvärd bil</p>
+                    </div>
+                    <div class="top-text-2">
+                        <p>Hitta snabbt den mest prisvärda bilen på blocket</p>
+                        <p>baserat på maskininlärning och 100.000 annonser</p>
+                    </div>
+                    <div class="search-field">
+                        <div class="card--search">
+                            <div class="inline-search mb-3">
+                                <div class="search-form-inline">
+                                    <div data-js="search-form" data-js-form-id="index-top" data-test="search-form-index-top">
+                                        <form action="/process" method="post" class="search-form">
+                                            <div class="search-form__address-block">
+                                                <label class="search-form__label mb-1" for="model_name">Ange en bilmodell</label>
+                                                <div class="search-form__input-wrapper">
+                                                    <input type="text" id="model_name" name="model_name" class="search-form__input" placeholder="Skriv model: Ex. Tiguan">
+                                                    <input type="submit" value="Sök" class="search-form__submit">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-bold search__count-value" data-js="search-count-value">719 stycken sökningar gjorda!</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-bottom-corner">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5 color-white">
+                        <ul class="list--checks heading-3">
+                            <li class="my-2 pl-2">Vi analysers annonser åt dig</li>
+                            <li class="my-2 pl-2">Snabbt, enkelt och gratis</li>
+                            <li class="my-2 pl-2">Alltid de bästa priserna</li>
+                            <li class="my-2 pl-2">Helt oberoende jämförelsetjänst</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="half-bg">
+            <div class="overlay-content">
+                <div class="text-content">
+                    <h2 class="overlay-title">Hur fungerar Bilfynd.se?</h2>
+                    <p class="overlay-text"><b> ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem </b></p>
+                    <p class="overlay-text"> sit amet, estibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, </p>
+                    <p class="overlay-text"> adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                </div>
+                <div class="image-content">
+                    <img src="{{ url_for('static', filename='sverigekarta.svg') }}" alt="sverigekarta" class="image-content">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="container">
+                <div class="column">
+                    <h2>Bilfynd.se</h2>
+                    <div class="list-item">Om oss</div>
+                    <div class="list-item">Frågor & svar</div>
+                    <div class="list-item">Kontakta oss</div>
+                    <div class="list-item">Vilkor</div>
+                </div>
+                <div class="column">
+                    <h2>Genvägar</h2>
+                    <div class="list-item">Prisvärda Märken</div>
+                    <div class="list-item">Prisvärda Bilar</div>
+                    <div class="list-item">Hur ekonomin går ihop</div>
+                </div>
+                <div class="column">
+                    <h2>Lär dig mer</h2>
+                    <div class="list-item">Vad som gör en bil prisvärd</div>
+                    <div class="list-item">Model AI</div>
+                </div>
+            </div>
+            <div class="footer-text">&copy; 2024 bilfynd.se</div>
+        </div>             
+    </body>
+    </html>
+
+

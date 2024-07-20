@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        img {
+            max-width: 1000px;
+            width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo-img">
+                <span class="site-name">Bildfynd.se</span>
+            </div>
+            <div class="nav-buttons">
+                <a href="page1.html" class="nav-button">Model AI</a>
+                <a href="page2.html" class="nav-button">Bästa Märket</a>
+                <a href="page3.html" class="nav-button">Bästa Dealen</a>
+                <a href="page4.html" class="nav-button">Om Oss</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-Header Section -->
+    <div class="sub-header">
+        <div class="sub-header-content">
+            <p>Trust the process! 5/5</p>
+        </div>
+    </div>
+    <div class="result-content">
+        <h1>Car Data Analysis</h1>
+        <img src="{{ url_for('static', filename='price_plots.png') }}" alt="Price Plots">
+
+        <h2>Top 10 Ranked Deals</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Heading</th>
+                    <th>Stad</th>
+                    <th>Price</th>
+                    <th>Reg Date</th>
+                    <th>Mileage</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for car in ranked_cars[:30] %}
+                <tr>
+                    <td>{{ car.final_rank }}</td>
+                    <td>{{ car.heading }}</td>
+                    <td>{{ car.region }}</td>
+                    <td>{{ car.price }}</td>
+                    <td>{{ car.regDate }}</td>
+                    <td>{{ car.mileage }}</td>
+                    <td><a href="{{ car.link }}" target="_blank">View Deal</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <div class="container">
+            <div class="column">
+                <h2>Bilfynd.se</h2>
+                <div class="list-item">Om oss</div>
+                <div class="list-item">Frågor & svar</div>
+                <div class="list-item">Kontakta oss</div>
+                <div class="list-item">Vilkor</div>
+            </div>
+            <div class="column">
+                <h2>Genvägar</h2>
+                <div class="list-item">Prisvärda Märken</div>
+                <div class="list-item">Prisvärda Bilar</div>
+                <div class="list-item">Hur ekonomin går ihop</div>
+            </div>
+            <div class="column">
+                <h2>Lär dig mer</h2>
+                <div class="list-item">Vad som gör en bil prisvärd</div>
+                <div class="list-item">Model AI</div>
+            </div>
+        </div>
+        <div class="footer-text">&copy; 2024 bilfynd.se</div>
+    </div>
+</body>
+</html>
